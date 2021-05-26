@@ -29,12 +29,23 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   fl_chart:
-  
+
+  #Firebase auth
+  cloud_firestore: 
+  firebase_core: 
+  firebase_auth: 
+
+  #for call feature
+  url_launcher:
+
   #For map
   provider:
   geolocator:
   http:
   google_maps_flutter:
+
+  #For image share
+  esys_flutter_share:
 
   #For Web Content
   webview_flutter:

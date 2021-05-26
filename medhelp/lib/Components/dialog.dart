@@ -22,9 +22,18 @@ class Dialogs {
             TextButton(
               onPressed: () => Navigator.of(context).pop(DialogAction.yes),
               child: const Text(
-                'Ok',
+                'Yes',
                 style: TextStyle(
                   color: Colors.blue,
+                ),
+              ),
+            ),
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(DialogAction.yes),
+              child: const Text(
+                'No',
+                style: TextStyle(
+                  color: Colors.red,
                 ),
               ),
             ),

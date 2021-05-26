@@ -14,10 +14,10 @@ class dashboardBody extends StatelessWidget {
           useFeature("Share Medical Info", "assets/images/account.png",
               '/shareInfo'), // shareInfo,
           useFeature("ChatBot", "assets/images/bot.png", '/chatBot'), // chatbot
-          useFeature("Setup Profile", "assets/images/doctors.png",
+          useFeature("Setup Profile", "assets/images/setUp.png",
               '/setupProfile'), // profile setup
-          useFeature("More on Covid-19", "assets/images/doctors.png",
-              '/covid19InfoIn'),
+          useFeature(
+              "More on Covid-19", "assets/images/cov19.png", '/covid19InfoIn'),
           useFeature("Testing feature", "", '/testing'),
         ],
       ),

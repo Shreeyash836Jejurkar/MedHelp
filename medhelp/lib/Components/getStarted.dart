@@ -106,7 +106,7 @@ class _getStartedState extends State<getStarted> {
                       fontSize: 18),
                 ),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/patientsDashboard');
+                  Navigator.pushNamed(context, '/startPage');
                 },
               ),
             ),

@@ -1,0 +1,126 @@
+{
+  "project_info": {
+    "project_number": "1082216983518",
+    "project_id": "demoproj1-846af",
+    "storage_bucket": "demoproj1-846af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082216983518:android:46ec19156592d6f6d34b4f",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082216983518-p5bea54fd7f0h98na3bq6m6ssvq8qnst.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF3ddxrSIIwpN5hOPCF9Epy2ufzVK7-iI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082216983518-p5bea54fd7f0h98na3bq6m6ssvq8qnst.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082216983518:android:ef8af100c51cabe8d34b4f",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082216983518-p5bea54fd7f0h98na3bq6m6ssvq8qnst.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF3ddxrSIIwpN5hOPCF9Epy2ufzVK7-iI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082216983518-p5bea54fd7f0h98na3bq6m6ssvq8qnst.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082216983518:android:02439dacf49446e9d34b4f",
+        "android_client_info": {
+          "package_name": "com.example.medhelp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082216983518-p5bea54fd7f0h98na3bq6m6ssvq8qnst.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF3ddxrSIIwpN5hOPCF9Epy2ufzVK7-iI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082216983518-p5bea54fd7f0h98na3bq6m6ssvq8qnst.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082216983518:android:d6fd68b4bcf426c4d34b4f",
+        "android_client_info": {
+          "package_name": "com.sirius.hackthon_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082216983518-p5bea54fd7f0h98na3bq6m6ssvq8qnst.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF3ddxrSIIwpN5hOPCF9Epy2ufzVK7-iI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082216983518-p5bea54fd7f0h98na3bq6m6ssvq8qnst.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

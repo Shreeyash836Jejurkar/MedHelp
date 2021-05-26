@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:medhelp/HomePage/Patient_Dashboard/utility/covidInfo.dart';
 
 class covidHeader extends StatelessWidget {
+  const covidHeader({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,16 +36,16 @@ class covidHeader extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                covidInfo("Total Cases", 12345, Colors.blue),
-                covidInfo("Confirmed Cases", 12345, Colors.red),
+                covidInfo("Total Cases", 167595221, Colors.blue),
+                covidInfo("Confirmed Cases", 383324, Colors.red),
               ],
             ),
             SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                covidInfo("Recovered Cases", 12345, Colors.green),
-                covidInfo("Total Deaths", 12345, Colors.black),
+                covidInfo("Recovered Cases", 104797515, Colors.green),
+                covidInfo("Total Deaths", 3483306, Colors.black),
               ],
             )
           ],

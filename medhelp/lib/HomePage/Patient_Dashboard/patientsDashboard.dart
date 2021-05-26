@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:medhelp/Components/dialog.dart';
 
 import 'body.dart';
 import 'header.dart';
 
 class patientsDashboard extends StatefulWidget {
+  final String uid;
+
+  const patientsDashboard({Key key, this.uid}) : super(key: key);
+
   @override
   _patientsDashboardState createState() => _patientsDashboardState();
 }
@@ -33,11 +38,18 @@ class _patientsDashboardState extends State<patientsDashboard> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.call,
-              size: 30,
+            icon: IconButton(
+              onPressed: () {
+                //call feature here
+                Dialogs.yesAbortDialog(
+                    context, 'Alert', 'Do you want to call any ambulance');
+              },
+              icon: Icon(
+                Icons.call,
+                size: 30,
+              ),
             ),
             label: 'Call',
           ),
@@ -49,9 +61,14 @@ class _patientsDashboardState extends State<patientsDashboard> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.settings,
-              size: 30,
+            icon: IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/settingsPage');
+              },
+              icon: Icon(
+                Icons.settings,
+                size: 30,
+              ),
             ),
             label: 'Settings',
           ),
