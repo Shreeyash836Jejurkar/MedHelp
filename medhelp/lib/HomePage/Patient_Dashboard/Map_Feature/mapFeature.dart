@@ -3,6 +3,7 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:medhelp/Components/dialog.dart';
 import 'package:medhelp/Components/shimmer.dart';
+import 'package:medhelp/HomePage/Patient_Dashboard/Map_Feature/Doctors_Info/resourceListing.dart';
 import 'package:medhelp/HomePage/Patient_Dashboard/Map_Feature/application_bloc.dart';
 import 'package:provider/provider.dart';
 
@@ -117,6 +118,7 @@ class _mapFeatureState extends State<mapFeature> {
                             SizedBox(
                               height: 40,
                             ),
+                            resourceListing(),
                             shimmerCard()
                           ],
                         )),

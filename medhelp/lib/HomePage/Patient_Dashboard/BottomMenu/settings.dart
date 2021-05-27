@@ -107,7 +107,7 @@ class _settingsPageState extends State<settingsPage> {
                       ),
                     ),
                     onPressed: () {
-                      null;
+                      Navigator.pushNamed(context, '/');
                     },
                   ),
                 ),

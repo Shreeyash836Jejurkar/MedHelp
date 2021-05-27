@@ -12,8 +12,10 @@ import 'package:medhelp/HomePage/Patient_Dashboard/Map_Feature/mapFeature.dart';
 import 'package:medhelp/HomePage/Patient_Dashboard/Setup_Profile/setupProfile.dart';
 import 'package:medhelp/HomePage/Patient_Dashboard/User_Info/medicalHistory.dart';
 import 'package:medhelp/HomePage/Patient_Dashboard/User_Info/shareInfo.dart';
+import 'package:medhelp/HomePage/Patient_Dashboard/communityForum.dart';
 import 'package:medhelp/HomePage/Patient_Dashboard/covid19India/covid19InfoIn.dart';
 import 'package:medhelp/HomePage/Patient_Dashboard/patientsDashboard.dart';
+import 'package:medhelp/testing/testing.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -47,6 +49,7 @@ class MyApp extends StatelessWidget {
           '/setupProfile': (context) => setupProfile(),
           '/medicalHistory': (context) => medicalHistory(),
           '/settingsPage': (context) => settingsPage(),
+          '/communityForum': (context) => communityForum(),
 
           // testing purpose
           // '/testing': (context) => testing(),

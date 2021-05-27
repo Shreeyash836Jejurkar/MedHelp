@@ -19,7 +19,9 @@ class _patientsDashboardState extends State<patientsDashboard> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: Icon(Icons.menu),
+        centerTitle: true,
+        leading: Icon(null),
+        actions: [Icon(null)],
         title: Center(
             child: Text(
           "Patient's Dashboard",

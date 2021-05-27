@@ -111,18 +111,6 @@ class _medicalHistoryState extends State<medicalHistory> {
                               padding: const EdgeInsets.all(15.0),
                               child: Column(
                                 children: [
-                                  Row(
-                                    children: [
-                                      Text(
-                                        "Date : --/--/--",
-                                        style: TextStyle(
-                                          color: Colors.blue,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
                                   SizedBox(
                                     height: 10,
                                   ),
@@ -332,6 +320,59 @@ class _medicalHistoryState extends State<medicalHistory> {
                                       Text(
                                         map['medical_history']['disease1']
                                             ['medications'][0],
+                                        style: TextStyle(
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 5.0),
+                                  Text(
+                                    "Epilepsy",
+                                    style: TextStyle(
+                                      color: Colors.blue,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "Avoid: ",
+                                        style: TextStyle(
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Alcohol,Cocaine",
+                                        style: TextStyle(
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 5.0),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "Medications : ",
+                                        style: TextStyle(
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                      Text(
+                                        "autozolamide,brivaracetam",
                                         style: TextStyle(
                                           color: Colors.black54,
                                           fontWeight: FontWeight.w600,

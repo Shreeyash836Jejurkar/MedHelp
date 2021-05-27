@@ -26,7 +26,7 @@ class _shareInfoState extends State<shareInfo> {
     sState();
   }
 
-  Map sState() {
+  void sState() {
     final firestoreInstance = FirebaseFirestore.instance;
     firestoreInstance
         .collection("MedHelp")
@@ -37,7 +37,6 @@ class _shareInfoState extends State<shareInfo> {
       querySnapshot.docs.forEach((result) {
         print(result.data());
         map = result.data();
-        return map;
       });
     });
   }
@@ -68,306 +67,308 @@ class _shareInfoState extends State<shareInfo> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SizedBox(height: 8),
             SizedBox(
-              height: 20,
+              height: 6,
             ),
-            Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Container(
-                child: Text(
-                  'Note: Fill the information in "setup profile" to access this Feature',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.black54),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            map == null
-                ? shimmerCard()
-                : RepaintBoundary(
-                    key: imageKey,
-                    child: Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.black38,
-                                    blurRadius: 10,
-                                    offset: Offset(0, 8))
-                              ]),
-                          child: Padding(
-                            padding: const EdgeInsets.all(15.0),
-                            child: Column(
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "Medical Card",
-                                      style: TextStyle(
-                                        color: Colors.blue,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Expanded(
-                                      child: new Container(
-                                          margin: const EdgeInsets.only(
-                                              left: 100.0, right: 100.0),
-                                          child: Divider(
-                                            color: Colors.blue,
-                                            height: 30,
-                                          )),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "Name : ",
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    Text(
-                                      map['FirstName'],
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 5.0),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "LastName : ",
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    Text(
-                                      map['LastName'],
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 5.0),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "Email : ",
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    Text(
-                                      map['Email'],
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 5.0),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "Residence : ",
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    Text(
-                                      map['contact']['address']['residence'],
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 5.0),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "Emergency Contact : ",
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    Text(
-                                      map['contact']['emergencyContact'],
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 5.0),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "Contact: ",
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    Text(
-                                      map['contact']['phone'],
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 5.0),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "Date of Birth : ",
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    Text(
-                                      map['dob'],
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 5.0),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "Gender : ",
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    Text(
-                                      map['gender'],
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 5.0),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "Height : ",
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    Text(
-                                      map['medicalInfo']['height'],
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 5.0),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "Weight : ",
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    Text(
-                                      map['medicalInfo']['weight'],
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 5.0),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "Additional Info : ",
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    Text(
-                                      map['medicalInfo']['additionalInfo'],
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 5.0),
-                              ],
-                            ),
-                          )),
+            if (map == null)
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Container(
+                      child: Text(
+                        'Note: Fill the information in "setup profile" to access this Feature',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.black54),
+                      ),
                     ),
                   ),
+                  shimmerCard()
+                ],
+              )
+            else
+              RepaintBoundary(
+                key: imageKey,
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.black38,
+                                blurRadius: 10,
+                                offset: Offset(0, 8))
+                          ]),
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Medical Card",
+                                  style: TextStyle(
+                                    color: Colors.blue,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: new Container(
+                                      margin: const EdgeInsets.only(
+                                          left: 100.0, right: 100.0),
+                                      child: Divider(
+                                        color: Colors.blue,
+                                        height: 30,
+                                      )),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  "Name : ",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  map['FirstName'],
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 5.0),
+                            Row(
+                              children: [
+                                Text(
+                                  "LastName : ",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  map['LastName'],
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 5.0),
+                            Row(
+                              children: [
+                                Text(
+                                  "Email : ",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  map['Email'],
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 5.0),
+                            Row(
+                              children: [
+                                Text(
+                                  "Residence : ",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  map['contact']['address']['residence'],
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 5.0),
+                            Row(
+                              children: [
+                                Text(
+                                  "Emergency Contact : ",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  map['contact']['emergencyContact'],
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 5.0),
+                            Row(
+                              children: [
+                                Text(
+                                  "Contact: ",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  map['contact']['phone'],
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 5.0),
+                            Row(
+                              children: [
+                                Text(
+                                  "Date of Birth : ",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  map['dob'],
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 5.0),
+                            Row(
+                              children: [
+                                Text(
+                                  "Gender : ",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  map['gender'],
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 5.0),
+                            Row(
+                              children: [
+                                Text(
+                                  "Height : ",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  map['medicalInfo']['height'],
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 5.0),
+                            Row(
+                              children: [
+                                Text(
+                                  "Weight : ",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  map['medicalInfo']['weight'],
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 5.0),
+                            Row(
+                              children: [
+                                Text(
+                                  "Additional Info : ",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  map['medicalInfo']['additionalInfo'],
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 5.0),
+                          ],
+                        ),
+                      )),
+                ),
+              ),
             SizedBox(
               height: 20,
             ),
