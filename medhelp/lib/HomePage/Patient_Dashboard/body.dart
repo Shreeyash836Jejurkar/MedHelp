@@ -18,7 +18,10 @@ class dashboardBody extends StatelessWidget {
               '/setupProfile'), // profile setup
           useFeature(
               "More on Covid-19", "assets/images/cov19.png", '/covid19InfoIn'),
-          useFeature("Testing feature", "", '/testing'),
+
+          //For Testing
+
+          // useFeature("Testing feature", "", '/testing'),
         ],
       ),
     );

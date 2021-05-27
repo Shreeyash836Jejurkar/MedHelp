@@ -14,7 +14,6 @@ import 'package:medhelp/HomePage/Patient_Dashboard/User_Info/medicalHistory.dart
 import 'package:medhelp/HomePage/Patient_Dashboard/User_Info/shareInfo.dart';
 import 'package:medhelp/HomePage/Patient_Dashboard/covid19India/covid19InfoIn.dart';
 import 'package:medhelp/HomePage/Patient_Dashboard/patientsDashboard.dart';
-import 'package:medhelp/testing/testing.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -48,7 +47,9 @@ class MyApp extends StatelessWidget {
           '/setupProfile': (context) => setupProfile(),
           '/medicalHistory': (context) => medicalHistory(),
           '/settingsPage': (context) => settingsPage(),
-          '/testing': (context) => testing(), // testing purpose
+
+          // testing purpose
+          // '/testing': (context) => testing(),
         },
       ),
     );
