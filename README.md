@@ -4,9 +4,9 @@ A flutter application that enables user to find nearby hospitals and get the det
 
 ### Tech Stack
 
-Framework : Flutter
-Language : Dart
-API : GoogleMaps
+Framework : Flutter <br>
+Language : Dart <br>
+API : GoogleMaps <br>
 
 #### Modules
 
