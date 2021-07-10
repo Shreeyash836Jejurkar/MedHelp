@@ -7,6 +7,7 @@ A flutter application that enables user to find nearby hospitals and get the det
 Framework : Flutter <br>
 Language : Dart <br>
 API : GoogleMaps <br>
+DataBase : FireStore
 
 #### Modules
 
